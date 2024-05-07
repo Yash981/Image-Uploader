@@ -41,8 +41,8 @@ export default function UploadedImage({ uploadUrl }: { uploadUrl: string }) {
     return (
         <>
             <Card className={`w-[700px] h-[400px] shadow-lg p-4 px-2   flex justify-center items-center flex-col  ${theme === 'dark' ? 'bg-[#4D5562] ' : 'bg-white border-slate-200 border-2'}`}>
-                <Image src={uploadUrl} width={700} height={400} className="rounded-md w-[700px] h-[400px] object-contain animate-pulse aspect-square" alt="logo" onLoadingComplete={(image)=>image.classList.remove('animate-pulse')}
-                priority={true} ></Image>
+                <Image src={uploadUrl} width={700} height={400} className="rounded-md w-[700px] h-[400px] object-contain " alt="logo" 
+                 priority={true}/>
             </Card>
             <div className="flex gap-4">
                 <Button className="bg-[#3662E3] !text-white hover:bg-[#3662E3]" onClick={shareImage}><Image src={LinkSvg} alt="logo" width={20} height={20} className="rounded-lg" />&ensp; Share </Button>
